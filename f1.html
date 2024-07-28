@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CouncellorJEE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .navbar {
+            display: flex;
+            background-color: #333;
+            padding: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar .nav-links {
+            display: flex;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            padding: 6px;
+            font-size: 17px;
+            border: none;
+        }
+        .search-bar button {
+            padding: 6px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background: #ccc;
+        }
+        .side-panel {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .side-panel a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        .side-panel a:hover {
+            background-color: #575757;
+        }
+        .side-panel .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+        .menu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            background-color: #333;
+            border: none;
+            padding: 10px;
+        }
+        .content {
+            margin-left: 0;
+            padding: 16px;
+            transition: margin-left 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">CouncellorJEE</div>
+
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Colleges</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+        <button class="menu-btn" onclick="openNav()">&#9776; Menu</button>
+    </div>
+
+    <div id="sidePanel" class="side-panel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+    </div>
+
+    <div class="content">
+        <h2>Welcome to CouncellorJEE</h2>
+        <p>Start editing this section as per your requirements.</p>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("sidePanel").style.width = "250px";
+            document.querySelector('.content').style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidePanel").style.width = "0";
+            document.querySelector('.content').style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>
